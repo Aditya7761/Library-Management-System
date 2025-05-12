@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Star Library</title>
+  </head>
+
+  <body>
+    <!-- Top navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- offcanvas trigger start -->
+        <button
+          class="navbar-toggler me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- offcanvas trigger end -->
+        <a class="navbar-brand text-uppercase fw-bold me-auto" href="#"
+          >Star Library</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-auto" role="search">
+            <div class="input-group my-3 my-lg-0">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary btn-primary text-white"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="assets/images/User-PNG-HD.png" class="user-icon" />
+                Admin
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">Change Password</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Top nav bar end -->
+
+    <!-- offcanvas start -->
+
+    <div
+      class="offcanvas offcanvas-start bg-dark text-white sidebar-nav"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="text-secondary small text-uppercase fw-bold">Core</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"
+              ><i class="fa-solid fa-gauge me-2"></i>Dashboard</a
+            >
+          </li>
+
+          <li class="nav-item my-0">
+            <hr />
+          </li>
+
+          <li class="nav-item">
+            <div class="text-secondary small text-uppercase fw-bold">
+              Inventory
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              href="#booksMgmt"
+              role="button"
+              aria-expanded="false"
+              aria-controls="booksMgmt"
+            >
+              <i class="fa-solid fa-book me-2"></i>Books Management
+              <span class="right-icon float-end"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </a>
+            <div class="collapse" id="booksMgmt">
+              <div>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="./add-book.html" class="nav-link"
+                      ><i class="fa-solid fa-plus me-2"></i>Add New</a
+                    >
+                  </li>
+                  <li>
+                    <a href="manage-books.html" class="nav-link"
+                      ><i class="fa-solid fa-list-ul me-2"></i>Manage All</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              href="#studentMgmt"
+              role="button"
+              aria-expanded="false"
+              aria-controls="studentMgmt"
+            >
+              <i class="fa-solid fa-user me-2"></i>Students Management
+              <span class="right-icon float-end"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </a>
+            <div class="collapse" id="studentMgmt">
+              <div>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-plus me-2"></i>Add New</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-list-ul me-2"></i>Manage All</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item my-0">
+            <hr />
+          </li>
+
+          <li class="nav-item">
+            <div class="text-secondary small text-uppercase fw-bold">
+              Business
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              href="#booksLoanMgmt"
+              role="button"
+              aria-expanded="false"
+              aria-controls="booksLoanMgmt"
+            >
+              <i class="fa-solid fa-book-open-reader me-2"></i>Books Loan
+              <span class="right-icon float-end"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </a>
+            <div class="collapse" id="booksLoanMgmt">
+              <div>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-plus me-2"></i>Add New</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-list-ul me-2"></i>Manage All</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link sidebar-link"
+              data-bs-toggle="collapse"
+              href="#subsMgmt"
+              role="button"
+              aria-expanded="false"
+              aria-controls="subsMgmt"
+            >
+              <i class="fa-solid fa-indian-rupee-sign me-2"></i>Subscription
+              <span class="right-icon float-end"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </a>
+            <div class="collapse" id="subsMgmt">
+              <div>
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-plus me-2"></i>Plans</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link"
+                      ><i class="fa-solid fa-list-ul me-2"></i>Purchase
+                      History</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item my-0">
+            <hr />
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"
+              ><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- offcanvas end -->
+
+    <!-- Main contant start -->
+    <main class="mt-1 pt-3">
+      <div class="container-fluid">
+        <!-- Cards -->
+        <div class="row Dashboard-counts">
+          <dv class="col-md-12">
+            <h4 class="fw-bold text-uppercase">Dashboard</h4>
+            <p>Statistics of the system</p>
+          </dv>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h6 class="card-title text-uppercase text-muted">
+                  Total Books
+                </h6>
+                <h1>130</h1>
+                <a href="#" class="card-link link-underline-light">view more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h6 class="card-title text-uppercase text-muted">
+                  Total Students
+                </h6>
+                <h1>1230</h1>
+                <a href="#" class="card-link link-underline-light">view more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h6 class="card-title text-uppercase text-muted">
+                  Total revenue
+                </h6>
+                <h1>₹ 1,30,500</h1>
+                <a href="#" class="card-link link-underline-light">view more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <h6 class="card-title text-uppercase text-muted">
+                  Total Books loans
+                </h6>
+                <h1>168</h1>
+                <a href="#" class="card-link link-underline-light">view more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+
+        <div class="row mt-5 Dashboard-tabs">
+          <div class="col-md-12">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button
+                  class="nav-link text-uppercase active"
+                  id="nav-home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-students-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-students-pane"
+                  aria-selected="true"
+                >
+                  New Students
+                </button>
+                <button
+                  class="nav-link text-uppercase"
+                  id="recent-loans-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-loans-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-loans-pane"
+                  aria-selected="false"
+                >
+                  Recent Loans
+                </button>
+                <button
+                  class="nav-link text-uppercase"
+                  id="recent-subs-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-subs-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-subs-pane"
+                  aria-selected="false"
+                >
+                  Recent Subscriptions
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <!-- New Students -->
+              <div
+                class="tab-pane fade show active"
+                id="recent-students-pane"
+                role="tabpanel"
+                aria-labelledby="nav-home-tab"
+                tabindex="0"
+              >
+                <table class="table">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">S.no</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Preparing for</th>
+                      <th scope="col">Registered on</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Aditya</td>
+                      <td>UPSC</td>
+                      <td>10-05-2024, 10:45 AM</td>
+                      <td><span class="badge text-bg-success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Prabhakar</td>
+                      <td>GATE</td>
+                      <td>12-07-2024, 11:35 AM</td>
+                      <td><span class="badge text-bg-success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Dev</td>
+                      <td>CAT</td>
+                      <td>11-05-2024, 12:45 PM</td>
+                      <td>
+                        <span class="badge text-bg-danger">Inactive</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Recent Loans -->
+              <div
+                class="tab-pane fade"
+                id="recent-loans-pane"
+                role="tabpanel"
+                aria-labelledby="recent-loans-tab"
+                tabindex="0"
+              >
+                <table class="table">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">S.no</th>
+                      <th scope="col">Book Name</th>
+                      <th scope="col">Student Name</th>
+                      <th scope="col">Loan Date</th>
+                      <th scope="col">Loan Due</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>GATE Concepts</td>
+                      <td>Bhaskar</td>
+                      <td>10-05-2025</td>
+                      <td>10-06-2025</td>
+                      <td>
+                        <span class="badge text-bg-success">Returned</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>UPSC Preparation</td>
+                      <td>Udit</td>
+                      <td>10-07-2025</td>
+                      <td>12-08-2025</td>
+                      <td>
+                        <span class="badge text-bg-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>CAT Techniques</td>
+                      <td>Divakar</td>
+                      <td>26-07-2025</td>
+                      <td>16-08-2025</td>
+                      <td>
+                        <span class="badge text-bg-success">Returned</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Recent Subscriptions -->
+              <div
+                class="tab-pane fade"
+                id="recent-subs-pane"
+                role="tabpanel"
+                aria-labelledby="recent-subs-tab"
+                tabindex="0"
+              >
+                <table class="table">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">S.no</th>
+                      <th scope="col">Subscriber</th>
+                      <th scope="col">Plan</th>
+                      <th scope="col">Subscribed On</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Aditya</td>
+                      <td>Premium</td>
+                      <td>10-05-2025</td>
+                      <td><span class="badge text-bg-success">Active</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Suraj</td>
+                      <td>Basic +</td>
+                      <td>14-06-2025</td>
+                      <td><span class="badge text-bg-danger">Expired</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Dev</td>
+                      <td>Basic</td>
+                      <td>11-05-2025</td>
+                      <td><span class="badge text-bg-danger">Expired</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Main contant end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/4cd42d78be.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
