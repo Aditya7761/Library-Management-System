@@ -57,3 +57,147 @@ body{
     }
 
 }
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar .form-control {
+  border-radius: 0.5rem;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  background-color: #1f1f2e;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar-nav .nav-link {
+  color: #cfcfcf;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: #343a40;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.sidebar-nav .right-icon {
+  transition: transform 0.3s;
+}
+
+.sidebar-nav .nav-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+/* Dashboard Cards */
+.Dashboard-counts .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.Dashboard-counts .card:hover {
+  transform: translateY(-5px);
+}
+
+.Dashboard-counts h6 {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.Dashboard-counts h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd #0d6efd #fff;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4em 0.6em;
+  border-radius: 10px;
+}
+
+.text-bg-success {
+  background-color: #28a745 !important;
+}
+
+.text-bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.text-bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
