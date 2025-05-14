@@ -191,13 +191,73 @@ body {
   color: #212529 !important;
 }
 
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  .navbar .form-control {
+/* General Mobile and Tablet Styles */
+@media (max-width: 991.98px) {
+  /* Offcanvas sidebar full width for smaller screens */
+  .offcanvas-start {
+    width: 100% !important;
+  }
+
+  /* Hide dashboard cards scroll issue */
+  .Dashboard-counts .card {
+    margin-bottom: 1rem;
+  }
+
+  /* Stack dashboard cards vertically */
+  .Dashboard-counts .col-md-3 {
     width: 100%;
   }
 
-  .card {
-    margin-bottom: 20px;
+  /* Tab content tables: scroll on smaller screens */
+  .tab-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
+
+  /* Adjust user icon in navbar */
+  .user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  /* Make the nav tabs full width */
+  .Dashboard-tabs .nav-tabs .nav-link {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Responsive input group (search bar) */
+  .navbar .input-group {
+    flex-direction: column;
+  }
+
+  .navbar .input-group input,
+  .navbar .input-group button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .card-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-body h6 {
+    font-size: 0.75rem;
+  }
+
+  .Dashboard-tabs .nav-tabs .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  
 }
